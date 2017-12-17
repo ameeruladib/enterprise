@@ -5,11 +5,13 @@
 </head>
 <body>
 
+	<a href="/getdata">Get applicants</a> <a href="/process">Process applicants</a>
+
 <table>
-	@foreach($employees as $employee)
+	@foreach($applicants as $applicant)
 
 	<tr>
-		<td>{{$employee->name}}</td><td>{{$employee->email}}</td><td>{{$employee->city}}</td><td>{{$employee->website}}</td><td>{{$employee->avatar}}</td>
+		<td>{{$applicant->ic}}</td><td>{{$applicant->name}}</td><td>{{$applicant->phone}}</td><td>{{$applicant->address}}</td><td>{{$applicant->result}}</td>
 	</tr>
 
 	@endforeach

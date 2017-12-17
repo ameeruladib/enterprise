@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -41,6 +42,26 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+/*
+|--------------------------------------------------------------------------
+| Register Service Providers
+|--------------------------------------------------------------------------
+*/
+
+//...
+
+// $app->configure('amqp');
+// $app->register(Bschmitt\Amqp\LumenServiceProvider::class);
+
+// //...
+// //...
+// $app->withFacades();
+// class_alias(\Illuminate\Support\Facades\App::class, 'App');
+// //...
+$app->singleton(
+Bschmitt\Amqp\LumenServiceProvider::class,
+Illuminate\Support\Facades\App::class
+);
 /*
 |--------------------------------------------------------------------------
 | Return The Application
